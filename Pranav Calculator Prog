@@ -1,0 +1,54 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+//Basic Calculator
+int main()
+{
+    int ch;
+    float x,y,sum,sub,prod,d,avg;
+    printf("   Calculator  ");//To display the Calculator options
+    printf("\n 1. Addition");
+    printf("\n 2. Subtraction");
+    printf("\n 3. Multiplication");
+    printf("\n 4. Division");
+    printf("\n 5. Average");
+    printf("\n\n Enter your choice(1-5):");
+    scanf("%d", &ch);
+    printf("\nEnter the two numbers you want the operations to be performed on:");
+    scanf("%f,%f", &x,&y);
+    if (ch==1){
+        sum=x+y;
+        printf("Sum= %.3f", sum);
+    }
+    else if(ch==2){
+        if (x>y){
+            sub=x-y;
+            printf("Difference= %.3f",sub);
+        }
+        else if (y>x){
+            sub=y-x;
+            printf("Difference= %.3f",sub);
+        }
+    }
+    else if(ch==3){
+        prod=x*y;
+        printf("Multiplication= %.3f",prod);
+    }
+    else if(ch==4){
+        d=x/y;
+        printf("Quotient= %.3f", d);
+    }
+    else if(ch==5){
+        avg=x/y;
+        printf("Average= %.3f", avg);
+    }
+    else if((ch>5)||(ch==0)){
+        printf("Invalid Choice");
+    }
+}
